@@ -3,7 +3,7 @@ module.exports = {
   theme: {
     extend: {
       animation: {
-        'likeClick': 'ping .5s ease-in-out'
+        'likeClick': 'pulse .5s ease-in-out'
       },
       keyframes: {
         wiggle: {

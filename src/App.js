@@ -25,8 +25,10 @@ function App() {
 
 
   return (
-    <div className="bg-gray-900 text-slate-50 pb-48 min-h-screen h-auto flex flex-col items-center font-mono px-3">
-      <div className="my-5 px-3">
+    <div className="bg-gray-900 pb-40 text-slate-50 min-h-screen h-auto flex flex-col items-center font-mono px-3">
+      <a href="https://github.com/olliekm/Shopify-Internship-Challenge" target="_blank"><i className="fab fa-github fixed right-0 m-10 z-[60]"></i></a>
+      <div className="w-full h-7 bg-green-600 absolute text-gray-100 text-center flex justify-center items-center"><small>Created by Oliver Kwun-Morfitt - <a href={'https://www.olliekm.com/'} className=' mr-2 underline' target="_blank">olliekm.com</a></small></div>
+      <div className="my-5 mt-10 px-3 z-10">
         <h1 className='text-3xl font-bold text-slate-300 '>Mars Curiosity Rover Images 🚀</h1>
         <h2 className='text-xl text-slate-400'>Images from sol {sol}</h2>
       </div>
@@ -73,7 +75,17 @@ function App() {
           <button className='hover:underline text-cyan-600' onClick={() => setSol(sol - -1)}>{`Go to sol ${sol + 1} ->`}</button>
         </div>
       </div>
-    </div>
+      <div className="w-96 h-36 p-5 bg-gray-800 mt-10 shadow-xl rounded-md flex">
+        <div className="flex flex-col text-sm justify-between">
+          <h1 className='text-green-300 text-lg'>Thank you for making it this far!</h1>
+          <p>I had a lot of fun making this website and I found the images amazing. I hope you enjoy it too.</p>
+          <div className="flex">
+            <a href="https://github.com/olliekm/Shopify-Internship-Challenge" className='mr-2 underline text-green-300' target="_blank">Source Code</a>
+            <a href="https://www.olliekm.com/" className='underline text-cyan-300' target="_blank">My personal website</a>
+          </div>
+        </div>
+      </div>
+    </div >
   );
 }
 

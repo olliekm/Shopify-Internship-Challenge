@@ -17,7 +17,7 @@ function Post(props) {
     }
 
     return (
-        <div className="bg-gray-800 max-w-[30rem] min-w-[20rem] rounded-md shadow-md my-2 overflow-hidden hover:scale-105 hover:shadow-2xl transition-all group border-green-600 hover:shadow-green-600 hover:z-40 duration-300 mx-3">
+        <div className="z-10 bg-gray-800 max-w-[30rem] min-w-[20rem] rounded-md shadow-md my-2 overflow-hidden hover:scale-105 hover:shadow-2xl transition-all group border-green-600 hover:shadow-green-600 hover:z-40 duration-300 mx-3">
             {
                 props.img !== undefined ?
                     (
@@ -45,8 +45,9 @@ function Post(props) {
                             <small><strong>Name:</strong> Curiosity</small>
                         </div>
                     }
+
                 </div>
-                <button onAnimationEnd={() => setLikeAnimation(false)} className={`${likeAnimation && "animate-likeClick"} transition-transform ${hasLiked ? "bg-cyan-900 hover:bg-cyan-600/25 ring-cyan-600 hover:text-cyan-500" : "bg-green-600 hover:bg-green-600/25 ring-green-600 hover:text-green-500"} px-5 py-3 rounded-lg uppercase  hover:ring-2 whitespace-nowrap  duration-[150ms]  font-semibold`} onClick={handleLikes}>{hasLiked ? "Unlike 💙" : "Like 💚"}</button>
+                <button onAnimationEnd={() => setLikeAnimation(false)} className={` transition-transform ${hasLiked ? "bg-cyan-900 hover:bg-cyan-600/25 ring-cyan-600 hover:text-cyan-500" : "bg-green-600 hover:bg-green-600/25 ring-green-600 hover:text-green-500"} px-5 py-3 rounded-lg uppercase  hover:ring-2 whitespace-nowrap  duration-[150ms]  font-semibold`} onClick={handleLikes}>{hasLiked ? "Unlike " : "Like "}<strong className={`${likeAnimation && "animate-likeClick"}`}>{hasLiked ? "💙" : "💚"}</strong></button>
             </div>
         </div >
     )
