@@ -25,7 +25,7 @@ function App() {
 
 
   return (
-    <div className="bg-gray-900 pb-40 text-slate-50 min-h-screen h-auto flex flex-col items-center font-mono px-3">
+    <div className="bg-gray-900 pb-48 text-slate-50 min-h-screen h-auto flex flex-col items-center font-mono px-3 overflow-x-hidden">
       <a href="https://github.com/olliekm/Shopify-Internship-Challenge" target="_blank"><i className="fab fa-github fixed right-0 m-10 z-[60]"></i></a>
       <div className="w-full h-7 bg-green-600 absolute text-gray-100 text-center flex justify-center items-center"><small>Created by Oliver Kwun-Morfitt - <a href={'https://www.olliekm.com/'} className=' mr-2 underline' target="_blank">olliekm.com</a></small></div>
       <div className="my-5 mt-10 px-3 z-10">
@@ -41,8 +41,8 @@ function App() {
       </div>
       <div className="bg-gray-900 flex flex-col justify-center w-full items-center">
         <div className="flex justify-between text-left z-20 mb-4">
-          <button className='mr-5 hover:underline text-green-600' onClick={() => setSol(sol - 1)}>{`<- Go to sol ${sol - 1}`}</button>
-          <button className='hover:underline text-cyan-600' onClick={() => setSol(sol - -1)}>{`Go to sol ${sol - -1} ->`}</button>
+          <button className='mr-5 hover:underline text-green-600 whitespace-nowrap' onClick={() => setSol(sol - 1)}>{`<- Go to sol ${sol - 1}`}</button>
+          <button className='hover:underline text-cyan-600 whitespace-nowrap' onClick={() => setSol(sol - -1)}>{`Go to sol ${sol - -1} ->`}</button>
         </div>
         {
           loading === false && retrievedPosts.length > 0 ? (
@@ -71,11 +71,11 @@ function App() {
           )
         }
         <div className="flex justify-between text-left mt-4">
-          <button className='mr-5 hover:underline text-green-600' onClick={() => setSol(sol - 1)}>{`<- Go to sol ${sol - 1}`}</button>
-          <button className='hover:underline text-cyan-600' onClick={() => setSol(sol - -1)}>{`Go to sol ${sol + 1} ->`}</button>
+          <button className='mr-5 hover:underline text-green-600 whitespace-nowrap' onClick={() => setSol(sol - 1)}>{`<- Go to sol ${sol - 1}`}</button>
+          <button className='hover:underline text-cyan-600 whitespace-nowrap' onClick={() => setSol(sol - -1)}>{`Go to sol ${sol + 1} ->`}</button>
         </div>
       </div>
-      <div className="w-96 h-36 p-5 bg-gray-800 mt-10 shadow-xl rounded-md flex">
+      <div className="w-96 h-auto p-5 bg-gray-800 mt-10 shadow-xl rounded-md flex">
         <div className="flex flex-col text-sm justify-between">
           <h1 className='text-green-300 text-lg'>Thank you for making it this far!</h1>
           <p>I had a lot of fun making this website and I found the images amazing. I hope you enjoy it too.</p>
